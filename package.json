@@ -1,0 +1,30 @@
+{
+  "name": "mater",
+  "version": "1.0.0",
+  "description": "A Simple Material Design Theme",
+  "main": "index.js",
+  "dependencies": {
+    "stylelint-config-standard": "^5.0.0"
+  },
+  "devDependencies": {
+    "stylelint": "^5.4.0",
+    "stylelint-config-standard": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alivelee/mater-wp.git"
+  },
+  "keywords": [
+    "wordpress",
+    "materialdesign"
+  ],
+  "author": "Xu Lei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alivelee/mater-wp/issues"
+  },
+  "homepage": "https://github.com/alivelee/mater-wp#readme"
+}

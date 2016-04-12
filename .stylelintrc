@@ -28,7 +28,6 @@
 "function-comma-space-before": "never",
 "function-parentheses-space-inside": "never",
 "function-url-quotes": "none",
-"indentation": "tab",
 "max-empty-lines": 3,
 "media-feature-colon-space-after": "never",
 "media-feature-colon-space-before": "never",
