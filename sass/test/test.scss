@@ -1,6 +1,7 @@
 body {
   height: auto;
-  background-image: url(./image/16_col.gif);
+  background-image: linear-gradient(to bottom, #000 0, rgba(255, 255, 255, 0) 1px);
   background-repeat: repeat-y;
+  background-size: 100% 1rem;
   margin-bottom: 20px;
 }
