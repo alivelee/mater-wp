@@ -127,6 +127,15 @@ function mater_scripts() {
 add_action( 'wp_enqueue_scripts', 'mater_scripts' );
 
 /**
+ * Typekit
+ */
+
+function mytheme_enqueue_typekit() {
+   wp_enqueue_script( 'mytheme-typekit', 'https://use.typekit.net/dgj7cro.js', array(), '1.0' );
+   wp_add_inline_script( 'mytheme-typekit', 'try{Typekit.load({ async: true });}catch(e){}' );
+}
+add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_typekit' );
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
