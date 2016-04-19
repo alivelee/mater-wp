@@ -57,6 +57,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Typography
 -------------------------------------------------------------- */
 
+@import "utilities/function";
+
+/* --------------------------------------------------------------
+# Typography
+-------------------------------------------------------------- */
+
 @import "typography/typography";
 
 /* --------------------------------------------------------------
@@ -124,3 +130,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 -------------------------------------------------------------- */
 
 @import "test/test.scss";
+
+/* --------------------------------------------------------------
+# Testing
+-------------------------------------------------------------- */
+
+@import "layout/main_page";
