@@ -1,13 +1,13 @@
 <?php
 /**
- * mater_Wp functions and definitions.
+ * mater-wp functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package mater_Wp
+ * @package mater-wp
  */
 
-if ( ! function_exists( 'a_theme_based_on_material_design_setup' ) ) :
+if ( ! function_exists( 'mater_wp_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'a_theme_based_on_material_design_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function a_theme_based_on_material_design_setup() {
+function mater_wp_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on mater_Wp, use a find and replace
-	 * to change 'a-theme-based-on-material-design' to the name of your theme in all the template files.
+	 * If you're building a theme based on mater-wp, use a find and replace
+	 * to change 'mater-wp' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'a-theme-based-on-material-design', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'mater-wp', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ function a_theme_based_on_material_design_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'a-theme-based-on-material-design' ),
+		'primary' => esc_html__( 'Primary', 'mater-wp' ),
 	) );
 
 	/*
@@ -60,13 +60,13 @@ function a_theme_based_on_material_design_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'a_theme_based_on_material_design_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'mater_wp_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
 endif;
-add_action( 'after_setup_theme', 'a_theme_based_on_material_design_setup' );
+add_action( 'after_setup_theme', 'mater_wp_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -75,44 +75,44 @@ add_action( 'after_setup_theme', 'a_theme_based_on_material_design_setup' );
  *
  * @global int $content_width
  */
-function a_theme_based_on_material_design_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'a_theme_based_on_material_design_content_width', 640 );
+function mater_wp_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'mater_wp_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'a_theme_based_on_material_design_content_width', 0 );
+add_action( 'after_setup_theme', 'mater_wp_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function a_theme_based_on_material_design_widgets_init() {
+function mater_wp_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'a-theme-based-on-material-design' ),
+		'name'          => esc_html__( 'Sidebar', 'mater-wp' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'a-theme-based-on-material-design' ),
+		'description'   => esc_html__( 'Add widgets here.', 'mater-wp' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'a_theme_based_on_material_design_widgets_init' );
+add_action( 'widgets_init', 'mater_wp_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function a_theme_based_on_material_design_scripts() {
-	wp_enqueue_style( 'a-theme-based-on-material-design-style', get_stylesheet_uri() );
+function mater_wp_scripts() {
+	wp_enqueue_style( 'mater-wp-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'a-theme-based-on-material-design-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'mater-wp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'a-theme-based-on-material-design-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'mater-wp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'a_theme_based_on_material_design_scripts' );
+add_action( 'wp_enqueue_scripts', 'mater_wp_scripts' );
 
 /**
  * Implement the Custom Header feature.

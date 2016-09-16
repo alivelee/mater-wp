@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package mater_Wp
+ * @package mater-wp
  */
 
 get_header(); ?>
