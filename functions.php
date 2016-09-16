@@ -1,13 +1,13 @@
 <?php
 /**
- * Mater functions and definitions.
+ * mater_Wp functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Mater
+ * @package mater_Wp
  */
 
-if ( ! function_exists( 'mater_setup' ) ) :
+if ( ! function_exists( 'a_theme_based_on_material_design_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'mater_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function mater_setup() {
+function a_theme_based_on_material_design_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Mater, use a find and replace
-	 * to change 'mater' to the name of your theme in all the template files.
+	 * If you're building a theme based on mater_Wp, use a find and replace
+	 * to change 'a-theme-based-on-material-design' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'mater', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'a-theme-based-on-material-design', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ function mater_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'mater' ),
+		'primary' => esc_html__( 'Primary', 'a-theme-based-on-material-design' ),
 	) );
 
 	/*
@@ -59,26 +59,14 @@ function mater_setup() {
 		'caption',
 	) );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );
-
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'mater_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'a_theme_based_on_material_design_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
 endif;
-add_action( 'after_setup_theme', 'mater_setup' );
+add_action( 'after_setup_theme', 'a_theme_based_on_material_design_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -87,54 +75,45 @@ add_action( 'after_setup_theme', 'mater_setup' );
  *
  * @global int $content_width
  */
-function mater_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'mater_content_width', 640 );
+function a_theme_based_on_material_design_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'a_theme_based_on_material_design_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'mater_content_width', 0 );
+add_action( 'after_setup_theme', 'a_theme_based_on_material_design_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function mater_widgets_init() {
+function a_theme_based_on_material_design_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'mater' ),
+		'name'          => esc_html__( 'Sidebar', 'a-theme-based-on-material-design' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'mater' ),
+		'description'   => esc_html__( 'Add widgets here.', 'a-theme-based-on-material-design' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'mater_widgets_init' );
+add_action( 'widgets_init', 'a_theme_based_on_material_design_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function mater_scripts() {
-	wp_enqueue_style( 'mater-style', get_stylesheet_uri() );
+function a_theme_based_on_material_design_scripts() {
+	wp_enqueue_style( 'a-theme-based-on-material-design-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'mater-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'a-theme-based-on-material-design-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'mater-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'a-theme-based-on-material-design-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'mater_scripts' );
+add_action( 'wp_enqueue_scripts', 'a_theme_based_on_material_design_scripts' );
 
-/**
- * Typekit
- */
-
-function mytheme_enqueue_typekit() {
-   wp_enqueue_script( 'mytheme-typekit', 'https://use.typekit.net/dgj7cro.js', array(), '1.0' );
-   wp_add_inline_script( 'mytheme-typekit', 'try{Typekit.load({ async: true });}catch(e){}' );
-}
-add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_typekit' );
 /**
  * Implement the Custom Header feature.
  */

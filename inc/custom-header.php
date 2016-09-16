@@ -12,33 +12,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Mater
+ * @package mater_Wp
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses mater_header_style()
+ * @uses a_theme_based_on_material_design_header_style()
  */
-function mater_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'mater_custom_header_args', array(
+function a_theme_based_on_material_design_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'a_theme_based_on_material_design_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'mater_header_style',
+		'wp-head-callback'       => 'a_theme_based_on_material_design_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'mater_custom_header_setup' );
+add_action( 'after_setup_theme', 'a_theme_based_on_material_design_custom_header_setup' );
 
-if ( ! function_exists( 'mater_header_style' ) ) :
+if ( ! function_exists( 'a_theme_based_on_material_design_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see mater_custom_header_setup().
+ * @see a_theme_based_on_material_design_custom_header_setup().
  */
-function mater_header_style() {
+function a_theme_based_on_material_design_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*

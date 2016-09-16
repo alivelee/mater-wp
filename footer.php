@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Mater
+ * @package mater_Wp
  */
 
 ?>
@@ -15,9 +15,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mater' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'mater' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'a-theme-based-on-material-design' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'a-theme-based-on-material-design' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'mater' ), 'mater', '<a href="http://underscores.me/" rel="designer">Xu Lei</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'a-theme-based-on-material-design' ), 'a-theme-based-on-material-design', '<a href="http://underscores.me/" rel="designer">Xu Lei</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
