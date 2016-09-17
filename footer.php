@@ -17,7 +17,9 @@
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mater-wp' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'mater-wp' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'mater-wp' ), 'mater-wp', '<a href="http://underscores.me/" rel="designer">Xu Lei</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'mater-wp' ), 'mater-wp', '<a href="" rel="designer">Xu Lei</a>' ); ?>
+			<span class="sep"> | </span>
+			<p>Copyright <?php echo date('Y')?></p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
