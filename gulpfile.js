@@ -13,14 +13,14 @@ gulp.task('browser-sync', function() {
     browserSync.init(files, {
     //browsersync with a php server
     proxy: "localhost:8888",
-    notify: false
+    notify: false,
     });
 });
 
 // Sass task, will run when any SCSS files change & BrowserSync
 // will auto-update browsers
 gulp.task('sass', function () {
-    return gulp.src('sass/*.scss')
+    return gulp.src('sass/style.scss')
         .pipe(sass())
         .pipe(gulp.dest('./'))
         .pipe(reload({stream:true}));
