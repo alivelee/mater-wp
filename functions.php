@@ -119,6 +119,15 @@ function mater_wp_scripts() {
 add_action( 'wp_enqueue_scripts', 'mater_wp_scripts' );
 
 /**
+ * excerpt length
+*/
+
+function mater_wp_excerpt_length($length) {
+	return 16;
+}
+
+add_filter('excerpt_length','mater_wp_excerpt_length',999);
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
