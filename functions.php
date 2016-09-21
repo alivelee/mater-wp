@@ -134,6 +134,11 @@ function my_custom_login() {
 }
 add_action('login_head', 'my_custom_login');
 
+//remove the login page shake
+function my_login_head() {
+	remove_action('login_head', 'wp_shake_js', 12);
+}
+add_action('login_head', 'my_login_head');
 /**
  * Implement the Custom Header feature.
  */
