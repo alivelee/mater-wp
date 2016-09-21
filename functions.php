@@ -127,6 +127,13 @@ function mater_wp_excerpt_length($length) {
 }
 
 add_filter('excerpt_length','mater_wp_excerpt_length',999);
+
+//Custom the login
+function my_custom_login() {
+	echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/style.css" />';
+}
+add_action('login_head', 'my_custom_login');
+
 /**
  * Implement the Custom Header feature.
  */
