@@ -1,6 +1,6 @@
 /*!
 Theme Name: mater-wp
-Theme URI: 
+Theme URI:
 Author: Xu Lei
 Author URI: https://github.com/alivelee
 Description: a theme based on material design
@@ -104,3 +104,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+/*--------------------------------------------------------------
+# login
+--------------------------------------------------------------*/
+@import "login";
