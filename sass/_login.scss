@@ -1,0 +1,63 @@
+body.login {
+  background: $color__login-screen;
+}
+.login h1 a {
+  background-image: url('./image/logo.png');
+}
+.login form {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+body.login div#login p.message {
+  color:$color__login_tips;
+  border-left: none;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+}
+body.login div#login form#loginform input#user_login {
+  display: block;
+  padding:0.1em;
+  border:none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+  background: #F8F6F5;
+}
+body.login div#login form#loginform input#user_pass {
+  display: block;
+  padding:0.1em;
+  border:none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+  background: #F8F6F5;
+}
+body.login div#login form#loginform p.submit input#wp-submit {
+  border:none;
+  text-shadow: none;
+  background: #2196F3;
+  box-shadow: 0pt 1.125pt 3pt 0.75pt rgba(0,0,0,0.25);
+}
+body.login div#login form#loginform p.forgetmenot input#rememberme {
+  box-shadow: none;
+  border:none;
+  background: #F8F6F5;
+}
+body.login div#login p#nav {
+  display: block;
+  background: #FFFFFF;
+  a {
+    display: inline-block;
+    padding: 20px;
+  }
+}
+body.login div#login p#backtoblog {
+  display: block;
+  background: #fff;
+  text-align: center;
+  a {
+    display: inline-block;
+    padding: 20px;
+  }
+}
+
